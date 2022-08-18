@@ -1,0 +1,23 @@
+{
+	"name": "api",
+	"version": "1.0.0",
+	"license": "MIT",
+	"scripts": {
+		"start": "tsx watch src/server.ts"
+	},
+	"devDependencies": {
+		"prisma": "^4.2.1",
+		"tsx": "^3.8.0",
+		"typescript": "^4.7.4"
+	},
+	"dependencies": {
+		"@fastify/cors": "^8.1.0",
+		"@prisma/client": "^4.2.1",
+		"@trpc/server": "^9.26.2",
+		"dotenv": "^16.0.1",
+		"fastify": "^4.4.0",
+		"prisma-zod-generator": "^0.4.1",
+		"znv": "^0.3.1",
+		"zod": "^3.17.10"
+	}
+}

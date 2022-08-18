@@ -1,0 +1,29 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest"
+	},
+	"plugins": ["prettier", "@typescript-eslint"],
+	"rules": {
+		"prettier/prettier": "warn",
+		"@typescript-eslint/no-var-requires": "off",
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": [
+			"warn",
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"caughtErrorsIgnorePattern": "^_"
+			}
+		]
+	},
+	"ignorePatterns": ["**/*.js", "**/node_modules/**", "**/__generated__/**", "**/dist/**"]
+}

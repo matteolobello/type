@@ -1,0 +1,18 @@
+{
+	"tabWidth": 2,
+	"useTabs": true,
+	"semi": false,
+	"trailingComma": "none",
+	"importOrder": [
+		"^react*",
+		"@react*",
+		"^expo*",
+		"<THIRD_PARTY_MODULES>",
+		"^@api/*",
+		"^@app/*",
+		"^@assets/*",
+		"^./*"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}

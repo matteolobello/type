@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "./__generated__/client"
+}
+
+generator zod {
+  provider = "prisma-zod-generator"
+  output   = "./__generated__/zod"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Task {
+  id    Int    @id @default(autoincrement())
+  title String
+}

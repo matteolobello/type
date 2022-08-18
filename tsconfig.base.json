@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"strictNullChecks": true,
+		"baseUrl": ".",
+		"paths": {
+			"@api/*": ["./packages/api/src/*"],
+			"@api/prisma": ["./packages/api/prisma/__generated__/client/index.d.ts"],
+			"@api/zod/*": ["./packages/api/prisma/__generated__/zod/schemas/*"],
+			"@app/*": ["./packages/app/src/*"],
+			"@assets/*": ["./packages/assets/*"]
+		}
+	},
+	"include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "prisma/zod"],
+	"exclude": ["**/node_modules", "**/dist"],
+	"extends": "expo/tsconfig.base"
+}
