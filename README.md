@@ -19,8 +19,8 @@ Powered by:
 ## Run the project locally
 
 ```sh
-$ git clone https://github.com/matteolobello/expo-trpc-monorepo.git
-$ cd expo-trpc-monorepo
+$ git clone https://github.com/matteolobello/type.git
+$ cd type
 $ yarn
 $ yarn api:start
 $ yarn app:start
