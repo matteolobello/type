@@ -1,31 +1,24 @@
 {
 	"private": true,
+	"packageManager": "yarn@1.22.17",
+	"workspaces": [
+		"packages/*"
+	],
 	"scripts": {
-		"api:setup": "yarn install && yarn workspace api install && yarn api:db:generate",
-		"api:start": "yarn api:setup && yarn workspace api start",
-		"api:db:generate": "yarn workspace api prisma generate",
-		"api:db:migrate": "yarn workspace api prisma migrate dev",
-		"app:setup": "yarn api:setup && yarn workspace app install",
-		"app:start": "yarn app:setup && yarn workspace app start",
-		"prepare": "husky install",
-		"eslint:fix": "yarn eslint . --fix",
-		"upgrade": "yarn upgrade-interactive"
-	},
-	"workspaces": {
-		"packages": [
-			"packages/*"
-		]
+		"api:dev": "turbo run dev --filter=api",
+		"web:dev": "turbo run dev --filter=web",
+		"native:dev": "yarn native:start",
+		"native:start": "turbo run start --filter=native",
+		"build": "turbo run build",
+		"clean": "turbo run clean && rm -rf node_modules",
+		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
 	},
 	"devDependencies": {
-		"@trivago/prettier-plugin-sort-imports": "^3.3.0",
-		"@typescript-eslint/eslint-plugin": "^5.33.0",
-		"@typescript-eslint/parser": "^5.33.0",
-		"alias-hq": "^5.4.0",
-		"eslint": "^8.21.0",
-		"eslint-plugin-prettier": "^4.2.1",
+		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
 		"prettier": "^2.7.1",
-		"typescript": "^4.7.4"
+		"prettier-plugin-tailwindcss": "^0.2.1",
+		"turbo": "latest"
 	}
 }
