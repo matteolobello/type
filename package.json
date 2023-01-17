@@ -11,7 +11,8 @@
 		"native:start": "turbo run start --filter=native",
 		"build": "turbo run build",
 		"clean": "turbo run clean && rm -rf node_modules",
-		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
