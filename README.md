@@ -5,7 +5,7 @@
   - TRPC
   - Prisma
 - Next.js
-  - `app` Directory
+  - App Directory
   - Tailwind
 - React Native (w/ Expo)
   - File-System based routing
