@@ -8,17 +8,19 @@ export default function Splash() {
 	const [unmountSplashScreen, setUnmountSplashScreen] = useState<boolean>(false)
 
 	useEffect(() => {
-		// Perform some sort of async data or asset fetching.
+		// Perform some sort of async data or asset fetching
 		setTimeout(() => {
 			router.replace("/home")
 
-			setUnmountSplashScreen(true)
+			setTimeout(() => {
+				setUnmountSplashScreen(true)
+			}, 500)
 		}, 1000)
 	}, [router])
 
 	return (
 		<>
-			<Stack.Screen options={{ headerShown: false, animation: "fade" }} />
+			<Stack.Screen options={{ headerShown: false }} />
 			{!unmountSplashScreen && <SplashScreen />}
 		</>
 	)

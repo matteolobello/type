@@ -12,7 +12,7 @@ export default function Home() {
 
 	return (
 		<View className="flex-1 items-center justify-center bg-white">
-			<Stack.Screen options={{ title: "Home", animation: "fade" }} />
+			<Stack.Screen options={{ title: "Home" }} />
 			<StatusBar style="auto" />
 
 			<Text className="mb-3 text-2xl font-bold">TYPE – Expo 👋</Text>
