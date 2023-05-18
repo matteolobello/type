@@ -1,4 +1,5 @@
 {
-	"extends": "config/tsconfig/node16.json",
+	"extends": "config/tsconfig/node18.json",
+	"include": ["**/*.ts", "**/*.tsx"],
 	"exclude": ["node_modules"]
 }

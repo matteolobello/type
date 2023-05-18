@@ -1,14 +1,25 @@
-import { Button, Text, View } from "react-native"
+import { useEffect, useState } from "react"
 
-import { StatusBar } from "expo-status-bar"
+import { SplashScreen, Stack, useRouter } from "expo-router"
 
-export default function Home() {
+export default function Splash() {
+	const router = useRouter()
+
+	const [unmountSplashScreen, setUnmountSplashScreen] = useState<boolean>(false)
+
+	useEffect(() => {
+		// Perform some sort of async data or asset fetching.
+		setTimeout(() => {
+			router.replace("/home")
+
+			setUnmountSplashScreen(true)
+		}, 1000)
+	}, [router])
+
 	return (
-		<View className="flex-1 items-center justify-center bg-white">
-			<StatusBar style="auto" />
-
-			<Text className="mb-5 text-2xl font-bold">Hello from Expo 👋</Text>
-			<Button onPress={() => alert("Pressed!")} title="Sample button" />
-		</View>
+		<>
+			<Stack.Screen options={{ headerShown: false, animation: "fade" }} />
+			{!unmountSplashScreen && <SplashScreen />}
+		</>
 	)
 }

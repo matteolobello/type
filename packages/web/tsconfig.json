@@ -1,5 +1,18 @@
 {
 	"extends": "config/tsconfig/nextjs.json",
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "../api/prisma/client.ts"],
+	"compilerOptions": {
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
+	},
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"../api/prisma/client.ts"
+	],
 	"exclude": ["node_modules"]
 }

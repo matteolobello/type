@@ -7,7 +7,7 @@ export default function HomePage() {
 
 	return (
 		<div className="p-4">
-			<h1 className="text-3xl text-black">Home</h1>
+			<h1 className="text-3xl text-black">TYPE – Next.js</h1>
 			<h3>Data from API: {data?.greeting ?? "..."}</h3>
 		</div>
 	)

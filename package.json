@@ -6,20 +6,21 @@
 	],
 	"scripts": {
 		"api:dev": "turbo run dev --filter=api",
-		"web:dev": "turbo run dev --filter=web",
-		"native:dev": "yarn native:start",
+		"api:start": "turbo run start --filter=api",
 		"native:start": "turbo run start --filter=native",
+		"web:dev": "turbo run dev --filter=web",
+		"web:start": "turbo run build --filter=web && turbo run start --filter=web",
 		"build": "turbo run build",
 		"clean": "turbo run clean && rm -rf node_modules",
 		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
 		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"@trivago/prettier-plugin-sort-imports": "^4.0.0",
-		"husky": "^8.0.1",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.7.1",
-		"prettier-plugin-tailwindcss": "^0.2.1",
-		"turbo": "latest"
+		"@trivago/prettier-plugin-sort-imports": "^4.1.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.2",
+		"prettier": "^2.8.8",
+		"prettier-plugin-tailwindcss": "^0.3.0",
+		"turbo": "1.9.7"
 	}
 }

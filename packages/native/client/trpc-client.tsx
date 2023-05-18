@@ -4,10 +4,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import { httpBatchLink } from "@trpc/client"
 import { createTRPCReact } from "@trpc/react-query"
 import type { AppRouter } from "api/trpc/routes"
+import { API_URL } from "config/api"
 
-const BASE_HOST = "http://localhost:3000"
-
-const trpc = createTRPCReact<AppRouter>()
+export const trpc = createTRPCReact<AppRouter>()
 
 let authToken: string | undefined = undefined
 
@@ -18,7 +17,7 @@ export function ClientProvider(props: { children: React.ReactNode }) {
 		trpc.createClient({
 			links: [
 				httpBatchLink({
-					url: `${BASE_HOST}/trpc`,
+					url: `${API_URL}/trpc`,
 					headers() {
 						return !authToken
 							? {}

@@ -3,7 +3,7 @@ module.exports = {
 	plugins: ["prettier"],
 	settings: {
 		next: {
-			rootDir: ["apps/*/", "packages/*/"]
+			rootDir: ["packages/*/"]
 		}
 	},
 	rules: {

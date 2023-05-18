@@ -9,28 +9,28 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
-		"@prisma/client": "^4.8.1",
-		"@tanstack/react-query": "^4.22.0",
-		"@trpc/client": "^10.9.0",
-		"@trpc/next": "^10.9.0",
-		"@trpc/react-query": "^10.9.0",
-		"@trpc/server": "^10.9.0",
+		"@prisma/client": "^4.14.1",
+		"@tanstack/react-query": "^4.29.7",
+		"@trpc/client": "^10.26.0",
+		"@trpc/next": "^10.26.0",
+		"@trpc/react-query": "^10.26.0",
+		"@trpc/server": "^10.26.0",
 		"api": "*",
-		"next": "latest",
-		"react": "18.1.0",
-		"react-dom": "18.1",
-		"zod": "^3.20.2"
+		"next": "13.4.2",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"zod": "^3.21.4"
 	},
 	"devDependencies": {
 		"@types/node": "^18.11.5",
-		"@types/react": "^18.0.22",
-		"@types/react-dom": "^18.0.7",
-		"autoprefixer": "^10.4.13",
+		"@types/react": "^18.2.6",
+		"@types/react-dom": "^18.2.4",
+		"autoprefixer": "^10.4.14",
 		"config": "*",
-		"eslint": "^8.19.0",
-		"postcss": "^8.4.21",
-		"prisma": "^4.8.1",
-		"tailwindcss": "^3.2.4",
-		"typescript": "^4.7.4"
+		"eslint": "^8.40.0",
+		"postcss": "^8.4.23",
+		"prisma": "^4.14.1",
+		"tailwindcss": "^3.3.2",
+		"typescript": "^5.0.4"
 	}
 }
